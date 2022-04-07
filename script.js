@@ -40,7 +40,7 @@ const team = [
 function printTeam() {
     let containerCard = document.getElementsByClassName('team-container');
     for (let i = 0; i < team.length; i++) {
-        containerCard.innerHTML += `
+        containerCard[0].innerHTML += `
         <div class="team-card">
             <div class="card-image">
                 <img src="img/${team[i].Foto}" alt="${team[i].Nome}"/>
