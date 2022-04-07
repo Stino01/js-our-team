@@ -35,4 +35,21 @@ const team = [
         Ruolo: 'Graphic Designer',
         Foto: 'barbara-ramos-graphic-designer.jpg'
     }
-]
+];
+
+function printTeam() {
+    let containerCard = document.getElementsByClassName('team-container');
+    for (let i = 0; i < team.length; i++) {
+        containerCard.innerHTML += `
+        <div class="team-card">
+            <div class="card-image">
+                <img src="img/${team[i].Foto}" alt="${team[i].Nome}"/>
+            </div>
+            <div class="card-text">
+                <h3>${team[i].Nome}</h3>
+                <p>${team[i].Ruolo}</p>
+            </div>
+        </div>`
+    }
+}
+printTeam();
