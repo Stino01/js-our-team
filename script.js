@@ -60,7 +60,7 @@ function addMember() {
     
     btn.addEventListener('click', getValue);
 
-    image = [
+    const image = [
         'new-team-member-01.jpg',
         'new-team-member-02.jpg',
         'new-team-member-03.jpg',
@@ -68,16 +68,15 @@ function addMember() {
     ]
     console.log(image);
 
-    function getValue(containerCard) {
-        nuovoUtente = {
+    function getValue() {
+        const nuovoUtente = {
             Nome: `${nome.value}`,
             Ruolo: `${ruolo.value}`,
             Foto: `${img.value}`
         }
         team.push(nuovoUtente);
-
+        printTeam();
     }
 }
 
 addMember();
-printTeam();
